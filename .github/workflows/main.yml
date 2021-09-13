@@ -18,8 +18,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Kernel Configure
       run: |
-        sudo set -e -o pipefail
-        ./cruelbuild config                    \
+        set -e -o pipefail
+        sudo ./cruelbuild config               \
                      model=${{ matrix.model }} \
                      name="Cruel-V3.10"        \
                      toolchain=$TOOLCHAIN      \
