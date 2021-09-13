@@ -1,30 +1,19 @@
-name: Android Kernel Action
-description: Build android kernel with GitHub Action
-author: Syahrial Agni Prasetya <lemniskett@protonmail.com>
-branding:
-  icon: box
-  color: green
-inputs:
-  arch: arm64
-    description: Device architecture
-    required: true
-  compiler: proton-clang/<fd7cde714b52c45a63f9c47363a528bebb21323f>
-    description: Compiler to use
-    required: true
-  defconfig: exynos9820-beyond1lte_defconfig
-    description: Defconfig to use
-    required: true
-  image: Image-dtb
-    description: Kernel image name
-    required: true
-outputs:
-  outfile:
-    description: Zip file generated from build
-runs:
-  using: docker
-  image: Dockerfile
-  args:
-    - ${{ inputs.arch }}
-    - ${{ inputs.compiler }}
-    - ${{ inputs.defconfig }}
-    - ${{ inputs.image }}
+name: "Build kernel."                                 # Description of the workflow.
+on:
+  push:
+    branches: dd-4                                    # Branch to build.
+  workflow_dispatch:                                  # Allow to manually trigger workflow.
+jobs:
+  build:
+    name: "Build kernel"
+    runs-on: ubuntu-latest
+    steps:
+    - name: "Checkout kernel source"                  # Clone the kernel source.
+      uses: actions/checkout@v2
+    - name: "Android kernel build"                    # Build kernel with lemniskett/android-kernel-actions.
+      uses: lemniskett/android-kernel-actions@master
+      with:
+        arch: arm64                                   # Specify arch
+        compiler: proton-clang/<fd7cde714b52c45a63f9c47363a528bebb21323f>           # Specify toolchain to use
+        defconfig: arch/arm64/configs/exynos9820-beyond1lte_defconfig               # Specify defconfig to use
+        image: Image.gz-dtb                           # Specify final build file
