@@ -1,9 +1,9 @@
 name: "Build kernel"                                 # Description of the workflow.
 on:
   push:
-    tags:
-    - 'artifacts'
     branches: dd-5                                    # Branch to build.
+    tags:
+    - '*'
   workflow_dispatch:                                  # Allow to manually trigger workflow.
 jobs:
   build:
@@ -23,4 +23,5 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         artifacts: ${{ steps.build.outputs.outfile }}
+        tag: '*'
         token: ${{ secrets.GITHUB_TOKEN }}
