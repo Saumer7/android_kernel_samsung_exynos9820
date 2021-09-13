@@ -1,7 +1,6 @@
 name: "Build kernel"                                 # Description of the workflow.
 on:
   push:
-    branches: dd-5                                    # Branch to build.
     tags:
     - '*'
   workflow_dispatch:                                  # Allow to manually trigger workflow.
