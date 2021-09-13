@@ -39,12 +39,23 @@ toolchain = {
         'CLANG_TRIPLE': 'toolchain/clang/host/linux-x86/clang-r349610-jopp/bin/aarch64-linux-gnu-',
         'CC': 'toolchain/clang/host/linux-x86/clang-r349610-jopp/bin/clang'
     },
-    'google': {
-        'CROSS_COMPILE': 'toolchain/aarch64-linux-android-4.9/bin/aarch64-linux-android-',
-        'CLANG_TRIPLE': 'toolchain/llvm/bin/aarch64-linux-android-',
-        'CC': 'toolchain/llvm/bin/clang'
-    },
     'proton': {
+        'CROSS_COMPILE': 'toolchain/bin/aarch64-linux-gnu-',
+        'CROSS_COMPILE_ARM32': 'toolchain/bin/arm-linux-gnueabi-',
+        'CC': 'toolchain/bin/clang',
+        'LD': 'toolchain/bin/ld.lld',
+        'AR': 'toolchain/bin/llvm-ar',
+        'NM': 'toolchain/bin/llvm-nm',
+        'OBJCOPY': 'toolchain/bin/llvm-objcopy',
+        'OBJDUMP': 'toolchain/bin/llvm-objdump',
+        'READELF': 'toolchain/bin/llvm-readelf',
+        'OBJSIZE': 'toolchain/bin/llvm-size',
+        'STRIP': 'toolchain/bin/llvm-strip',
+        'LDGOLD': 'toolchain/bin/aarch64-linux-gnu-ld.gold',
+        'LLVM_AR': 'toolchain/bin/llvm-ar',
+        'LLVM_DIS': 'toolchain/bin/llvm-dis'
+    },
+    'proton210213': {
         'CROSS_COMPILE': 'toolchain/bin/aarch64-linux-gnu-',
         'CROSS_COMPILE_ARM32': 'toolchain/bin/arm-linux-gnueabi-',
         'CC': 'toolchain/bin/clang',
@@ -80,18 +91,42 @@ models = {
     'G970F': {
         'config': 'exynos9820-beyond0lte_defconfig'
     },
+    'G970N': {
+        'config': 'exynos9820-beyond0lteks_defconfig'
+    },
     'G973F': {
         'config': 'exynos9820-beyond1lte_defconfig'
+    },
+    'G973N': {
+        'config': 'exynos9820-beyond1lteks_defconfig'
     },
     'G975F': {
         'config': 'exynos9820-beyond2lte_defconfig'
     },
+    'G975N': {
+        'config': 'exynos9820-beyond2lteks_defconfig'
+    },
     'G977B': {
         'config': 'exynos9820-beyondx_defconfig'
+    },
+    'G977N': {
+        'config': 'exynos9820-beyondxks_defconfig'
+    },
+    'N970F': {
+        'config': 'exynos9820-d1_defconfig'
+    },
+    'N971N': {
+        'config': 'exynos9820-d1xks_defconfig'
     },
     'N975F': {
         'config': 'exynos9820-d2s_defconfig'
     },
+    'N976B': {
+        'config': 'exynos9820-d2x_defconfig'
+    },
+    'N976N': {
+        'config': 'exynos9820-d2xks_defconfig'
+    }
 }
 
 OBJTREE_SIZE_GB = 3
@@ -360,18 +395,15 @@ def parse_stage():
     omodes = [':config', ':build', ':mkimg', ':pack']
     all_modes = modes + omodes
 
-    if len(argv) > 1:
-        mode = argv[1]
-        if mode not in all_modes:
-            if mode[0] == '+' or mode[0] == '-' or '=' in mode:
-                mode = 'mkimg'
-            else:
-                print_usage()
-                fatal('Please, specify the mode from {}.'.format(all_modes))
+    mode = argv[1] if len(argv) > 1 else 'mkimg'
+    if mode not in all_modes:
+        if mode[0] == '+' or mode[0] == '-' or '=' in mode:
+            mode = 'mkimg'
         else:
-            argv.pop(1)
+            print_usage()
+            fatal('Please, specify the mode from {}.'.format(all_modes))
     else:
-        mode = 'mkimg'
+        argv.pop(1)
 
     if mode in omodes:
         if mode == ':config':
@@ -501,7 +533,7 @@ def parse_args():
     return configs
 
 def setup_env(features, configs, model):
-    set_env(ARCH='arm64', PLATFORM_VERSION='11', ANDROID_MAJOR_VERSION='r')
+    set_env(ARCH='arm64', ANDROID_MAJOR_VERSION='q')
     if features['fake_config']:
         defconfig = os.path.join('arch/arm64/configs', models[model]['config'])
         set_env(KCONFIG_BUILTINCONFIG=defconfig)
@@ -688,7 +720,7 @@ def mkaptar(boot, vbmeta):
     run(['md5sum AP.tar >> AP.tar && mv AP.tar AP.tar.md5'], check=True, shell=True)
 
 def adb_get_state():
-    return run(['adb', 'get-state'], stdout=PIPE, stderr=DEVNULL, check=False).stdout.decode('utf-8').strip()
+    return run(['adb', 'get-state'], stdout=PIPE, stderr=DEVNULL, check=False).stdout.decode('utf-8')
 
 def adb_wait_for_device():
     state = adb_get_state()
@@ -1095,7 +1127,7 @@ set_progress 1\
            kernel=kernel_name+' Kernel Installed')
 
     os.makedirs('cruel/META-INF/com/google/android', exist_ok=True)
-    with open('cruel/META-INF/com/google/android/update-binary', 'w', encoding='utf-8') as fh:
+    with open('cruel/META-INF/com/google/android/update-binary', 'w', encoding='ascii') as fh:
         fh.write(''.join([header, eval(_(template)), check, flash, footer]))
 
 def pack(configs, features, zipname, dtb_map, images):
