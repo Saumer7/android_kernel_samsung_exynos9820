@@ -27,7 +27,7 @@ jobs:
         git submodule add --branch proton210213 https://github.com/Saumer7/proton-clang toolchain/proton
     - name: Make tsbuild executable
       run: chmod +x ./ts-build-proton.sh
-      run: chmod +x ./build-aosp
+           chmod +x ./build-aosp
     - name: Kernel Build
       run: echo 3 | ./ts-build-proton.sh
     - name: Upload Kernel Zip
