@@ -16,10 +16,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Make cruelbuild executable
+      run: chmod +x ./cruelbuild
     - name: Kernel Configure
       run: |
         set -e -o pipefail
-        sudo ./cruelbuild config               \
+        ./cruelbuild config                    \
                      model=${{ matrix.model }} \
                      name="Cruel-V3.10"        \
                      toolchain=$TOOLCHAIN      \
