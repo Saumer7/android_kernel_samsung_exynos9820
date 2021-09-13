@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Kernel Configure
       run: |
-        set -e -o pipefail
+        sudo set -e -o pipefail
         ./cruelbuild config                    \
                      model=${{ matrix.model }} \
                      name="Cruel-V3.10"        \
