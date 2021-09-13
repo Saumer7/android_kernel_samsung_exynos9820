@@ -1,0 +1,30 @@
+name: Android Kernel Action
+description: Build android kernel with GitHub Action
+author: Syahrial Agni Prasetya <lemniskett@protonmail.com>
+branding:
+  icon: box
+  color: green
+inputs:
+  arch: arm64
+    description: Device architecture
+    required: true
+  compiler: proton-clang/<fd7cde714b52c45a63f9c47363a528bebb21323f>
+    description: Compiler to use
+    required: true
+  defconfig: exynos9820-beyond1lte_defconfig
+    description: Defconfig to use
+    required: true
+  image: Image-dtb
+    description: Kernel image name
+    required: true
+outputs:
+  outfile:
+    description: Zip file generated from build
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.arch }}
+    - ${{ inputs.compiler }}
+    - ${{ inputs.defconfig }}
+    - ${{ inputs.image }}
