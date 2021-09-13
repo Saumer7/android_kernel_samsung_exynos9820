@@ -3,6 +3,7 @@ on:
   push:
     tags:
     - '*'
+    branches: dd-5                                    # Branch to build.
   workflow_dispatch:                                  # Allow to manually trigger workflow.
 jobs:
   build:
