@@ -1,4 +1,4 @@
-name: "Build kernel."                                 # Description of the workflow.
+name: "Build kernel"                                 # Description of the workflow.
 on:
   push:
     branches: dd-4                                    # Branch to build.
