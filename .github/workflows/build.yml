@@ -18,7 +18,7 @@ jobs:
         defconfig: exynos9820-beyond1lte_defconfig                          # Specify defconfig to use
         image: Image.gz-dtb                           # Specify final build file
     - name: Upload build artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: ${{ github.sha }}
-          path: out
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{ github.sha }}
+        path: out
