@@ -6398,5 +6398,15 @@ CONFIG_SCHED_KAIR_GLUE=y
 CONFIG_FPSIMD_CORRUPTION_DETECT=y
 
 
-## Tweaked
+
+
+## !dd
+
+## avoid build error idk why
 # CONFIG_EXYNOS_EHLD is not set
+
+## disable 1950 limit of little cpu, seems disable LIT&MID cpu throttling
+# CONFIG_EXYNOS_THERMAL is not set
+## above 1 related with below 2
+# CONFIG_EXYNOS_ACPM_THERMAL is not set
+# CONFIG_THERMAL_EMULATION is not set
