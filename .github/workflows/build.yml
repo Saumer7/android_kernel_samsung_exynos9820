@@ -21,4 +21,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: ${{ github.sha }}
-        path: out/arch/arm64/boot/
+        path: out/*.img
