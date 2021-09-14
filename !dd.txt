@@ -4,3 +4,4 @@ workflow added
 
 disable some cpu throttle
 oc etc exynos9820.dts
+lib/debug-snapshot disable some throttle related things
