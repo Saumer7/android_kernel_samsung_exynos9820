@@ -8,11 +8,6 @@ jobs:
     name: "Build kernel"
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout zipper
-      uses: actions/checkout@v2
-      with:
-        repository: lemniskett/AnyKernel3
-        path: zipper
     - name: "Checkout kernel source"                  # Clone the kernel source.
       uses: actions/checkout@v2
     - name: "Android kernel build"                    # Build kernel with lemniskett/android-kernel-actions.
@@ -26,4 +21,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: ${{ github.sha }}
-        path: /github/workspace/out
+        path: out/arch/"$arch"/boot/"$image"
