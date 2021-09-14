@@ -1,3 +1,5 @@
 workflow added
 
 # CONFIG_EXYNOS_EHLD is not set to fix build error idk
+
+disable some cpu throttle
