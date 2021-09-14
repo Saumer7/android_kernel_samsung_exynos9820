@@ -2,7 +2,6 @@ name: "Build kernel"                                 # Description of the workfl
 on:
   push:
     branches: dd-5                                    # Branch to build.
-    tags: '*'
   workflow_dispatch:                                  # Allow to manually trigger workflow.
 jobs:
   build:
@@ -18,9 +17,8 @@ jobs:
         compiler: proton-clang/fd7cde714b52c45a63f9c47363a528bebb21323f     # Specify toolchain to use
         defconfig: exynos9820-beyond1lte_defconfig                          # Specify defconfig to use
         image: Image.gz-dtb                           # Specify final build file
-    - name: Release build
-      uses: ncipollo/release-action@v1
-      with:
-        artifacts: ${{ steps.build.outputs.outfile }}
-        tag: '*'
-        token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload build artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ github.sha }}
+          path: out
