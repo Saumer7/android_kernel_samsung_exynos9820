@@ -5,14 +5,8 @@ on:
   workflow_dispatch:                                  # Allow to manually trigger workflow.
 jobs:
   build:
-    name: "Build kernel"
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout zipper
-      uses: actions/checkout@v2
-      with:
-        repository: lemniskett/AnyKernel3
-        path: zipper
     - name: "Checkout kernel source"                  # Clone the kernel source.
       uses: actions/checkout@v2
     - name: "Android kernel build"                    # Build kernel with lemniskett/android-kernel-actions.
@@ -20,8 +14,8 @@ jobs:
       with:
         arch: arm64                                   # Specify arch
         compiler: clang/11/binutils                   # Specify toolchain to use
-        defconfig: exynos9820-beyond1lte_defconfig                          # Specify defconfig to use
-        image: Image.gz-dtb                           # Specify final build file
+        defconfig: exynos9820-beyond1lte_defconfig    # Specify defconfig to use
+        image: Image-dtb                              # Specify final build file
     - name: Upload build artifact
       uses: actions/upload-artifact@v2
       with:
