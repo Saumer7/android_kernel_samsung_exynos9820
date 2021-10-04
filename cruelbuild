@@ -99,27 +99,15 @@ models = {
     'G973F': {
         'config': 'exynos9820-beyond1lte_defconfig'
     },
-    'G973N': {
-        'config': 'exynos9820-beyond1lte_defconfig'
-    },
     'G975F': {
         'config': 'exynos9820-beyond2lte_defconfig'
     },
     'G977B': {
         'config': 'exynos9820-beyondx_defconfig'
     },
-    'N970F': {
-        'config': 'exynos9820-d1_defconfig'
-    },
     'N975F': {
         'config': 'exynos9820-d2s_defconfig'
     },
-    'N976B': {
-        'config': 'exynos9820-d2x_defconfig'
-    },
-    'N976N': {
-        'config': 'exynos9820-d2xks_defconfig'
-    }
 }
 
 OBJTREE_SIZE_GB = 3
