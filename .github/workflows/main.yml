@@ -3,7 +3,7 @@ name: Build
 on: [push]
 
 env:
-  TOOLCHAIN: proton210213
+  TOOLCHAIN: cruel
   INSTALLER: yes
 
 jobs:
@@ -11,23 +11,25 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
+      fail-fast: false
       matrix:
         model: [ "G973N" ]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Make cruelbuild executable
-      run: chmod +x ./cruelbuild
-    - name: Kernel Configure
-      run: |
-        set -e -o pipefail
-        ./cruelbuild config                    \
-                     model=${{ matrix.model }} \
-                     name="Cruel-V3.10"        \
-                     toolchain=$TOOLCHAIN      \
-                     
-        2>&1 | tee config.info
-    - name: Install gcc-aarch64-linux-gnu
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.6'
+
+      - name: Kernel Configure
+        run: |
+          set -e -o pipefail
+          ./cruelbuild config                    \
+                       model=${{ matrix.model }} \
+                       name="Cruel-v4.2"         \
+                       toolchain=$TOOLCHAIN      \
+          2>&1 | tee config.info
+      - name: Install gcc-aarch64-linux-gnu
         if: env.TOOLCHAIN == 'system-gcc' || env.TOOLCHAIN == 'system-clang'
         env:
           DEBIAN_FRONTEND: noninteractive
@@ -39,7 +41,7 @@ jobs:
         run: sudo apt-get install -y -qq llvm lld clang
       - name: Deploy Toolchain
         if: env.TOOLCHAIN != 'system-gcc' && env.TOOLCHAIN != 'system-clang'
-        run: git clone --depth 1 -j $(nproc) --branch $TOOLCHAIN --single-branch https://github.com/Saumer7/samsung-exynos9820-toolchain toolchain
+        run: git clone --depth 1 -j $(nproc) --branch $TOOLCHAIN --single-branch https://github.com/CruelKernel/samsung-exynos9820-toolchain toolchain
 
       - name: Kernel Build
         run: ./cruelbuild :build
