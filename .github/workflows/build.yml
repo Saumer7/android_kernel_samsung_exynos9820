@@ -1,6 +1,7 @@
 name: "Build kernel"                                 # Description of the workflow. 
 on:
   push:
+    tags: '*'
     branches: dd-7                                    # Branch to build.
   workflow_dispatch:                                  # Allow to manually trigger workflow.
 jobs:
@@ -11,6 +12,7 @@ jobs:
       uses: actions/checkout@v2
     - name: "Android kernel build"                    # Build kernel with lemniskett/android-kernel-actions.
       uses: lemniskett/android-kernel-actions@master
+      id: build
       with:
         arch: arm64                                   # Specify arch
         compiler: clang/11/binutils                   # Specify toolchain to use
