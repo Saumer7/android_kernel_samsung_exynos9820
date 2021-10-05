@@ -16,8 +16,8 @@ jobs:
         compiler: clang/11/binutils                   # Specify toolchain to use
         defconfig: exynos9820-beyond1lte_defconfig    # Specify defconfig to use
         image: Image-dtb                              # Specify final build file
-    - name: Upload build artifact
-      uses: actions/upload-artifact@v2
+    - name: Release build
+      uses: ncipollo/release-action@v1
       with:
-        name: ${{ github.sha }}
-        path: out/arch/arm64/boot/
+        artifacts: ${{ steps.build.outputs.outfile }}
+        token: ${{ secrets.GITHUB_TOKEN }}
