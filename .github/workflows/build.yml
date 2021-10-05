@@ -18,6 +18,7 @@ jobs:
         compiler: clang/11/binutils                   # Specify toolchain to use
         defconfig: exynos9820-beyond1lte_defconfig    # Specify defconfig to use
         image: Image-dtb                              # Specify final build file
+        tag: *
     - name: Release build
       uses: ncipollo/release-action@v1
       with:
