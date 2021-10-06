@@ -6415,44 +6415,44 @@ CONFIG_FPSIMD_CORRUPTION_DETECT=y
 # CONFIG_SEC_BOOTSTAT is not set
 
 ## cruel+nohardening.conf
-# CONFIG_LOD_SEC is not set
-# CONFIG_UH is not set
-# CONFIG_UH_LKMAUTH is not set
-# CONFIG_UH_LKM_BLOCK is not set
-# CONFIG_RKP_CFP is not set
-# CONFIG_RKP_CFP_JOPP is not set
+## # CONFIG_LOD_SEC is not set
+## # CONFIG_UH is not set
+## # CONFIG_UH_LKMAUTH is not set
+## # CONFIG_UH_LKM_BLOCK is not set
+## # CONFIG_RKP_CFP is not set
+## # CONFIG_RKP_CFP_JOPP is not set
 
 ## cruel+nodebug.conf
-# CONFIG_KALLSYMS_ALL is not set
-# CONFIG_SLUB_DEBUG is not set
-# CONFIG_DEBUG_INFO is not set
-CONFIG_STRIP_ASM_SYMS=y
-# CONFIG_SCHED_DEBUG is not set
-# CONFIG_SCHEDSTATS is not set
-# CONFIG_DEBUG_ATOMIC_SLEEP is not set
-# CONFIG_DEBUG_BUGVERBOSE is not set
-# CONFIG_DEBUG_LIST is not set
-# CONFIG_BUG_ON_DATA_CORRUPTION is not set
-# CONFIG_BLOCK_SUPPORT_STLOG is not set
-# CONFIG_BT_DEBUGFS is not set
-# CONFIG_USB_DEBUG_DETAILED_LOG is not set
-# CONFIG_MMC_SUPPORT_STLOG is not set
-# CONFIG_ION_DEBUG_EVENT_RECORD is not set
+## # CONFIG_KALLSYMS_ALL is not set
+## # CONFIG_SLUB_DEBUG is not set
+## # CONFIG_DEBUG_INFO is not set
+## CONFIG_STRIP_ASM_SYMS=y
+## # CONFIG_SCHED_DEBUG is not set
+## # CONFIG_SCHEDSTATS is not set
+## # CONFIG_DEBUG_ATOMIC_SLEEP is not set
+## # CONFIG_DEBUG_BUGVERBOSE is not set
+## # CONFIG_DEBUG_LIST is not set
+## # CONFIG_BUG_ON_DATA_CORRUPTION is not set
+## # CONFIG_BLOCK_SUPPORT_STLOG is not set
+## # CONFIG_BT_DEBUGFS is not set
+## # CONFIG_USB_DEBUG_DETAILED_LOG is not set
+## # CONFIG_MMC_SUPPORT_STLOG is not set
+## # CONFIG_ION_DEBUG_EVENT_RECORD is not set
 ## # CONFIG_SEC_DEBUG_TSP_LOG is not set
-CONFIG_MCPS_DEBUG_PRINTK=4
-# CONFIG_MCPS_DEBUG is not set
-# CONFIG_EXYNOS_CORESIGHT is not set
-# CONFIG_EXYNOS_DEBUG_TEST is not set
-# CONFIG_SEC_BOOTSTAT is not set
-# CONFIG_CGROUP_DEBUG is not set
+## CONFIG_MCPS_DEBUG_PRINTK=4
+## # CONFIG_MCPS_DEBUG is not set
+## # CONFIG_EXYNOS_CORESIGHT is not set
+## # CONFIG_EXYNOS_DEBUG_TEST is not set
+## # CONFIG_SEC_BOOTSTAT is not set
+## # CONFIG_CGROUP_DEBUG is not set
 ## # CONFIG_SDFAT_DEBUG is not set
 ## # CONFIG_SDFAT_DBG_MSG is not set
-# CONFIG_PMUCAL_DBG is not set
+## # CONFIG_PMUCAL_DBG is not set
 
 ## cruel-graphite.conf
 CONFIG_GCC_GRAPHITE=y
 
-cruel-lto.conf
+## cruel-lto.conf
 CONFIG_LD_DEAD_CODE_DATA_ELIMINATION=y
 CONFIG_LTO=y
 # CONFIG_LTO_NONE is not set
@@ -6460,10 +6460,10 @@ CONFIG_LTO_CLANG=y
 # CONFIG_CFI_CLANG is not set
 
 ## cruel-noatime.conf
-CONFIG_DEFAULT_MNT_NOATIME=y
-# CONFIG_DEFAULT_MNT_RELATIME is not set
+## CONFIG_DEFAULT_MNT_NOATIME=y
+## # CONFIG_DEFAULT_MNT_RELATIME is not set
 
-cruel-polly.conf
+## cruel-polly.conf
 CONFIG_LLVM_POLLY=y
 
 ## cruel-performance.conf
