@@ -1,21 +1,21 @@
 name: "Build kernel"                                 # Description of the workflow. 
 on:
   push:
-    branches: dd-8                                    # Branch to build.
-  workflow_dispatch:                                  # Allow to manually trigger workflow.
+    branches: dd-8                                                      # Branch to build.
+  workflow_dispatch:                                                    # Allow to manually trigger workflow.
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: "Checkout kernel source"                  # Clone the kernel source.
+    - name: "Checkout kernel source"                                    # Clone the kernel source.
       uses: actions/checkout@v2
-    - name: "Android kernel build"                    # Build kernel with lemniskett/android-kernel-actions.
+    - name: "Android kernel build"                                      # Build kernel with lemniskett/android-kernel-actions.
       uses: lemniskett/android-kernel-actions@master
       with:
-        arch: arm64                                   # Specify arch
-        compiler: clang/11/binutils                   # Specify toolchain to use
-        defconfig: exynos9820-beyond1lte_defconfig    # Specify defconfig to use
-        image: Image-dtb                              # Specify final build file
+        arch: arm64                                                     # Specify arch
+        compiler: aosp-clang/master/clang-r433403/binutils              # Specify toolchain to use
+        defconfig: exynos9820-beyond1lte_defconfig                      # Specify defconfig to use
+        image: Image-dtb                                                # Specify final build file
     - name: Upload build artifact
       uses: actions/upload-artifact@v2
       with:
