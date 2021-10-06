@@ -9,3 +9,13 @@ lib/debug-snapshot disable some throttle related things
 add CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE_O3 config
 Makefile
 init/Kconfig
+
+add Polly, LTO
+MAkefile
+arch/Kconfig
+arch/arm64/Kconfig
+crypto/Makefile
+lib/Kconfig.debug
+scripts/Makefile.modpost
+scripts/gcc-ld
+scripts/link-vmlinux.sh
