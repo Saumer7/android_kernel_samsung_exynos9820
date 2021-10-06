@@ -3,5 +3,9 @@ workflow added
 # CONFIG_EXYNOS_EHLD is not set to fix build error idk
 
 disable some cpu throttle
-oc etc exynos9820.dts
+beyond1lte defconfig
 lib/debug-snapshot disable some throttle related things
+
+add CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE_O3 config
+Makefile
+init/Kconfig
