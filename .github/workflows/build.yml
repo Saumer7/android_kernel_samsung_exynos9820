@@ -1,7 +1,7 @@
 name: "Build kernel"                                 # Description of the workflow. 
 on:
   push:
-    branches: dd-8                                                      # Branch to build.
+    branches: dd-8(only_disable_cpu_throttle)                           # Branch to build.
   workflow_dispatch:                                                    # Allow to manually trigger workflow.
 jobs:
   build:
