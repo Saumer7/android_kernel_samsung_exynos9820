@@ -606,13 +606,13 @@ def switch_toolchain(compiler):
 #        if not (tool_exists(cc) and compiler == branch):
 #            ret = run(['git', 'submodule', 'foreach', 'git', 'rev-parse', '--verify', '--quiet', compiler],
 #                      stdout=DEVNULL, stderr=DEVNULL)
-            if ret.returncode != 0:
-                try:
-                    run(['git', 'submodule', 'foreach', 'git', 'branch', compiler, 'origin/' + compiler],
-                        check=True, stdout=DEVNULL, stderr=DEVNULL)
-                except CalledProcessError:
-                    fatal("Can't checkout to toolchain: " + compiler)
-            run(['git', 'submodule', 'foreach', 'git', 'checkout', compiler], check=True)
+#            if ret.returncode != 0:
+#                try:
+#                    run(['git', 'submodule', 'foreach', 'git', 'branch', compiler, 'origin/' + compiler],
+#                        check=True, stdout=DEVNULL, stderr=DEVNULL)
+#                except CalledProcessError:
+#                    fatal("Can't checkout to toolchain: " + compiler)
+#            run(['git', 'submodule', 'foreach', 'git', 'checkout', compiler], check=True)
 
 def build(compiler, objtree='.'):
     env = {}
