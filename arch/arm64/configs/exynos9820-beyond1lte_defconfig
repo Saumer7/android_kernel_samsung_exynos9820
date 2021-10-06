@@ -6445,8 +6445,7 @@ CONFIG_MCPS_DEBUG_PRINTK=4
 # CONFIG_EXYNOS_DEBUG_TEST is not set
 # CONFIG_SEC_BOOTSTAT is not set
 # CONFIG_CGROUP_DEBUG is not set
-# CONFIG_SDFAT_DEBUG is not set
-## below 1 makes build error
+## # CONFIG_SDFAT_DEBUG is not set
 ## # CONFIG_SDFAT_DBG_MSG is not set
 # CONFIG_PMUCAL_DBG is not set
 
