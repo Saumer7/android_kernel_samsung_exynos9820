@@ -13,7 +13,7 @@ jobs:
       uses: lemniskett/android-kernel-actions@master
       with:
         arch: arm64                                                     # Specify arch
-        compiler: proton-clang/fd7cde714b52c45a63f9c47363a528bebb21323f # Specify toolchain to use
+        compiler: aosp-clang/master/clang-r433403  # Specify toolchain to use
         defconfig: exynos9820-beyond1lte_defconfig                      # Specify defconfig to use
         image: Image-dtb                                                # Specify final build file
     - name: Upload build artifact
