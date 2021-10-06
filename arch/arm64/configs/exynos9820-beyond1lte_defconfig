@@ -6464,7 +6464,7 @@ CONFIG_LTO_CLANG=y
 ## # CONFIG_DEFAULT_MNT_RELATIME is not set
 
 ## cruel-polly.conf
-CONFIG_LLVM_POLLY=y
+## CONFIG_LLVM_POLLY=y
 
 ## cruel-performance.conf
 # CONFIG_CC_OPTIMIZE_FOR_SIZE is not set
