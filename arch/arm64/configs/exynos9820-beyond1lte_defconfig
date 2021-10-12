@@ -6414,6 +6414,10 @@ CONFIG_FPSIMD_CORRUPTION_DETECT=y
 ## fix builderror with some thermal related things off
 # CONFIG_SEC_BOOTSTAT is not set
 
+
+# CONFIG_SEC_INPUT_BOOSTER is not set
+
+
 ## cruel+nohardening.conf
 ## # CONFIG_LOD_SEC is not set
 ## # CONFIG_UH is not set
