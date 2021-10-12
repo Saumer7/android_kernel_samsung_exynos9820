@@ -9,3 +9,8 @@ lib/debug-snapshot disable some throttle related things
 add CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE_O3 config
 Makefile
 init/Kconfig
+
+disable CPU freq limit (https://github.com/ThunderStorms21th/Galaxy-S10/commit/b51aa8d3c1d765d9a9c78f080745dd93e79ea640)
+exynos-acme.c
+
+install with modified dtb works, use original dtbo from LOS
