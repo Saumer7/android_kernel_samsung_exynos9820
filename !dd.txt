@@ -15,5 +15,8 @@ exynos-acme.c
 
 install with modified dtb works, use original dtbo from LOS
 
-disable CONFIG_SEC_INPUT_BOOSTER (idk this works)
-beyond1lte defconfig
+
+
+##
+
+disable CONFIG_SEC_INPUT_BOOSTER not affect on dtbo touchboost
