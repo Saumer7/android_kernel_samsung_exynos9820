@@ -1,7 +1,7 @@
 name: "Build kernel"                                 # Description of the workflow. 
 on:
   push:
-    branches: dd-9(perfo3)                                              # Branch to build.
+    branches: dd-9(imidiot2)                                            # Branch to build.
   workflow_dispatch:                                                    # Allow to manually trigger workflow.
 jobs:
   build:
