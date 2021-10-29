@@ -6451,7 +6451,7 @@ CONFIG_MCPS_DEBUG_PRINTK=0
 # CONFIG_SDFAT_DBG_MSG is not set
 # CONFIG_PMUCAL_DBG is not set
 
-## cruel-graphite.conf
+## cruel-graphite.conf -
 ## CONFIG_GCC_GRAPHITE=y
 
 ## cruel-lto.conf
@@ -6513,3 +6513,76 @@ CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE_O3=y
 ## CFS_BANDWITH - can makes too much cpu's thrrottling
 # CONFIG_CFS_BANDWIDTH is not set
 
+
+## DISABLE DEBUGGING
+
+# CONFIG_MALI_FENCE_DEBUG is not set
+# CONFIG_EXYNOS_SNAPSHOT_DM is not set
+# CONFIG_EXYNOS_NPU_PUBLISH_NPU_BUILD_VER is not set
+# CONFIG_VISION_UNITTEST is not set
+# CONFIG_CRYPTO_TEST is not set
+# CONFIG_MCPS_DEBUG is not set
+# CONFIG_ARM_EXYNOS_DEVFREQ_DEBUG is not set
+# CONFIG_ION_DEBUG_EVENT_RECORD is not set
+# CONFIG_EXYNOS_DEBUG_TEST is not set
+# CONFIG_HAVE_DEBUG_KMEMLEAK is not set
+# CONFIG_PM_DEBUG is not set
+# CONFIG_PM_SLEEP_DEBUG is not set
+# CONFIG_DEBUG_ATOMIC_SLEEP is not set
+# CONFIG_SCHED_DEBUG is not set
+# CONFIG_SAMSUNG_LMKD_DEBUG is not set
+# CONFIG_MMC_DW_DEBUG is not set
+# CONFIG_TOUCHSCREEN_DUMP_MODE is not set
+# CONFIG_CMA_DEBUGFS is not set
+# CONFIG_CMUCAL_DEBUG is not set
+# CONFIG_PHY_EXYNOS_DEBUGFS is not set
+# CONFIG_PHY_EXYNOS_DP_DEBUGFS is not set
+# CONFIG_CGROUP_DEBUG is not set
+# CONFIG_SLUB_DEBUG is not set
+# CONFIG_HAVE_DMA_API_DEBUG is not set
+# CONFIG_BLK_DEBUG_FS is not set
+# CONFIG_ARCH_SUPPORTS_DEBUG_PAGEALLOC is not set
+# CONFIG_CMA_DEBUGFS is not set
+# CONFIG_PM_DEBUG is not set
+# CONFIG_PM_SLEEP_DEBUG is not set
+# CONFIG_BT_DEBUGFS is not set
+# CONFIG_MCPS_DEBUG_PRINTK is not set
+# CONFIG_MCPS_DEBUG is not set
+## below 1 disable some gpu related function
+## CONFIG_MALI_DEBUG_SYS is not set
+## below 1 makes ttweaks gpu crash
+## CONFIG_MALI_DEBUG_KERNEL_SYSFS is not set
+# CONFIG_EXYNOS_AFBC_DEBUG is not set
+# CONFIG_USB_DEBUG_DETAILED_LOG is not set
+# CONFIG_MMC_DW_DEBUG is not set
+# CONFIG_ION_DEBUG_EVENT_RECORD is not set
+# CONFIG_EXYNOS_BCM_DBG is not set
+# CONFIG_EXYNOS_BCM_DBG_AUTO is not set
+# CONFIG_PMUCAL_DBG is not set
+# CONFIG_EXYNOS_FLEXPMU_DBG is not set
+# CONFIG_CMUCAL_DEBUG is not set
+# CONFIG_DEBUG_SNAPSHOT_LOGGING_SMC is not set
+## below 1 makes build error
+# CONFIG_EXYNOS_DEBUG is not set
+# CONFIG_EXYNOS_DEBUG_TEST is not set
+# CONFIG_EXYNOS_ITMON is not set
+# CONFIG_EXYNOS_CORESIGHT is not set
+# CONFIG_EXYNOS_CORESIGHT_PC_INFO is not set
+CONFIG_PC_ITERATION=0
+## below 1 makes build error
+# CONFIG_EXYNOS_ADV_TRACER is not set
+# CONFIG_EXYNOS_ADV_TRACER_S2D is not set
+# CONFIG_EXYNOS_ADV_TRACER_MISC is not set
+# CONFIG_EXYNOS_EHLD is not set
+# CONFIG_ARM_EXYNOS_DEVFREQ_DEBUG is not set
+# CONFIG_PHY_EXYNOS_DEBUGFS is not set
+# CONFIG_PHY_EXYNOS_DP_DEBUGFS is not set
+# CONFIG_CCIC_MAX77705_DEBUG is not set
+# CONFIG_EXYNOS_NPU_DEBUG_SRAM_DUMP is not set
+# CONFIG_FIRMWARE_SRAM_DUMP_DEBUGFS is not set
+## below 1 makes bootloop
+## CONFIG_PRINTK is not set
+## idk what are below 3
+## CONFIG_LOG_BUF_SHIFT is not set
+## CONFIG_LOG_CPU_MAX_BUF_SHIFT is not set
+## CONFIG_PRINTK_SAFE_LOG_BUF_SHIFT is not set
