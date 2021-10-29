@@ -6417,12 +6417,12 @@ CONFIG_FPSIMD_CORRUPTION_DETECT=y
 
 
 ## cruel+nohardening.conf
-## # CONFIG_LOD_SEC is not set
-## # CONFIG_UH is not set
-## # CONFIG_UH_LKMAUTH is not set
-## # CONFIG_UH_LKM_BLOCK is not set
-## # CONFIG_RKP_CFP is not set
-## # CONFIG_RKP_CFP_JOPP is not set
+# CONFIG_LOD_SEC is not set
+# CONFIG_UH is not set
+# CONFIG_UH_LKMAUTH is not set
+# CONFIG_UH_LKM_BLOCK is not set
+# CONFIG_RKP_CFP is not set
+# CONFIG_RKP_CFP_JOPP is not set
 
 ## cruel+nodebug.conf
 ## # CONFIG_KALLSYMS_ALL is not set
