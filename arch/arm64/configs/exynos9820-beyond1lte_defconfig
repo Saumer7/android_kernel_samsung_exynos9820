@@ -6451,7 +6451,7 @@ CONFIG_MCPS_DEBUG_PRINTK=0
 # CONFIG_SDFAT_DBG_MSG is not set
 # CONFIG_PMUCAL_DBG is not set
 
-## cruel-graphite.conf -
+## cruel-graphite.conf
 ## CONFIG_GCC_GRAPHITE=y
 
 ## cruel-lto.conf
@@ -6508,7 +6508,7 @@ CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE_O3=y
 # CONFIG_PHY_EXYNOS_DEBUGFS is not set
 # CONFIG_PHY_EXYNOS_DP_DEBUGFS is not set
 ## # CONFIG_SEC_DEBUG_TSP_LOG is not set
-# CONFIG_F2FS_SEC_BLOCK_OPERATIONS_DEBUG is not set
+## # CONFIG_F2FS_SEC_BLOCK_OPERATIONS_DEBUG is not set
 # CONFIG_BLOCK_SUPPORT_STLOG is not set
 ## CFS_BANDWITH - can makes too much cpu's thrrottling
 # CONFIG_CFS_BANDWIDTH is not set
