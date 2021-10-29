@@ -6474,43 +6474,41 @@ CONFIG_DEFAULT_MNT_NOATIME=y
 CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE_O3=y
 
 ## Thunderstorm ts_config.conf (some of them)
-## # CONFIG_MALI_FENCE_DEBUG is not set
-## # CONFIG_CPU_FREQ_GOV_PERFORMANCE is not set
-## # CONFIG_DTC is not set
-## # CONFIG_RD_BZIP2 is not set
-## # CONFIG_RD_LZMA is not set
-## # CONFIG_RD_XZ is not set
-## # CONFIG_RD_LZO is not set
-## # CONFIG_RD_LZ4 is not set
-## # CONFIG_CRAMFS is not set
-## ## CONFIG_MQ_IOSCHED_DEADLINE is not set
-## ## CONFIG_MQ_IOSCHED_KYBER is not set
-## ## CONFIG_PGTABLE_MAPPING is not set
-## ## CONFIG_EXYNOS_NPU_PUBLISH_NPU_BUILD_VER is not set
-## # CONFIG_VISION_UNITTEST is not set
-## # CONFIG_CRYPTO_TEST is not set
-## # CONFIG_MCPS_DEBUG is not set
-## # CONFIG_ARM_EXYNOS_DEVFREQ_DEBUG is not set
-## # CONFIG_ION_DEBUG_EVENT_RECORD is not set
-## # CONFIG_EXYNOS_DEBUG_TEST is not set
-## # CONFIG_HAVE_DEBUG_KMEMLEAK is not set
-## # CONFIG_PM_DEBUG is not set
-## # CONFIG_PM_SLEEP_DEBUG is not set
-## # CONFIG_DEBUG_ATOMIC_SLEEP is not set
-## ## below 3 default disabled
-## # CONFIG_SCHED_DEBUG is not set
-## # CONFIG_SAMSUNG_LMKD_DEBUG is not set
-## # CONFIG_MMC_DW_DEBUG is not set
-## # CONFIG_TOUCHSCREEN_DUMP_MODE is not set
-## ## below 1 default disabled
-## # CONFIG_CGROUP_DEBUG is not set
-## # CONFIG_SLUB_DEBUG is not set
-## # CONFIG_CMA_DEBUGFS is not set
-## # CONFIG_CMUCAL_DEBUG is not set
-## # CONFIG_PHY_EXYNOS_DEBUGFS is not set
-## # CONFIG_PHY_EXYNOS_DP_DEBUGFS is not set
-## # CONFIG_SEC_DEBUG_TSP_LOG is not set
-## # CONFIG_BLOCK_SUPPORT_STLOG is not set
-## ## CFS_BANDWITH - can makes too much cpu's thrrottling
-## # CONFIG_CFS_BANDWIDTH is not set
+# CONFIG_MALI_FENCE_DEBUG is not set
+# CONFIG_CPU_FREQ_GOV_PERFORMANCE is not set
+# CONFIG_DTC is not set
+# CONFIG_RD_BZIP2 is not set
+# CONFIG_RD_LZMA is not set
+# CONFIG_RD_XZ is not set
+# CONFIG_RD_LZO is not set
+# CONFIG_RD_LZ4 is not set
+# CONFIG_CRAMFS is not set
+## CONFIG_MQ_IOSCHED_DEADLINE is not set
+## CONFIG_MQ_IOSCHED_KYBER is not set
+## CONFIG_PGTABLE_MAPPING is not set
+## CONFIG_EXYNOS_NPU_PUBLISH_NPU_BUILD_VER is not set
+# CONFIG_VISION_UNITTEST is not set
+# CONFIG_CRYPTO_TEST is not set
+# CONFIG_MCPS_DEBUG is not set
+# CONFIG_ARM_EXYNOS_DEVFREQ_DEBUG is not set
+# CONFIG_ION_DEBUG_EVENT_RECORD is not set
+# CONFIG_EXYNOS_DEBUG_TEST is not set
+# CONFIG_HAVE_DEBUG_KMEMLEAK is not set
+# CONFIG_PM_DEBUG is not set
+# CONFIG_PM_SLEEP_DEBUG is not set
+# CONFIG_DEBUG_ATOMIC_SLEEP is not set
+## CONFIG_SCHED_DEBUG is not set
+## CONFIG_SAMSUNG_LMKD_DEBUG is not set
+## CONFIG_MMC_DW_DEBUG is not set
+# CONFIG_TOUCHSCREEN_DUMP_MODE is not set
+## CONFIG_CGROUP_DEBUG is not set
+# CONFIG_SLUB_DEBUG is not set
+# CONFIG_CMA_DEBUGFS is not set
+# CONFIG_CMUCAL_DEBUG is not set
+# CONFIG_PHY_EXYNOS_DEBUGFS is not set
+# CONFIG_PHY_EXYNOS_DP_DEBUGFS is not set
+# CONFIG_SEC_DEBUG_TSP_LOG is not set
+# CONFIG_BLOCK_SUPPORT_STLOG is not set
+## CFS_BANDWITH - can makes too much cpu's thrrottling
+# CONFIG_CFS_BANDWIDTH is not set
 
