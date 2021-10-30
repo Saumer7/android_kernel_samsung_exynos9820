@@ -6588,9 +6588,9 @@ CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE_O3=y
 ## CONFIG_PRINTK_SAFE_LOG_BUF_SHIFT is not set
 
 ## some of sec_debug makes build error
-## # CONFIG_EXYNOS_SAVELOGS is not set
-## # CONFIG_ARCH_EXYNOS is not set
-## # CONFIG_SEC_REBOOT is not set
+# CONFIG_EXYNOS_SAVELOGS is not set
+# CONFIG_ARCH_EXYNOS is not set
+# CONFIG_SEC_REBOOT is not set
 ## # CONFIG_SEC_DEBUG is not set
 ## # CONFIG_SEC_DEBUG_RESET_REASON is not set
 ## # CONFIG_SEC_DEBUG_EXTRA_INFO is not set
