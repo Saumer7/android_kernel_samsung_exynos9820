@@ -6616,7 +6616,7 @@ CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE_O3=y
 ## below 1 makes build error - no its default on ts
 ## # CONFIG_F2FS_SEC_BLOCK_OPERATIONS_DEBUG is not set
 # CONFIG_DEBUG_INFO is not set
-# # CONFIG_DEBUG_FS is not set
+# CONFIG_DEBUG_FS is not set
 ## below 1 seems makes build error
 ## # CONFIG_DEBUG_KERNEL is not set
 # CONFIG_HAVE_DEBUG_KMEMLEAK is not set
