@@ -6549,9 +6549,9 @@ CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE_O3=y
 # CONFIG_MCPS_DEBUG_PRINTK is not set
 # CONFIG_MCPS_DEBUG is not set
 ## below 1 disable some gpu related function
-# CONFIG_MALI_DEBUG_SYS is not set
+## # CONFIG_MALI_DEBUG_SYS is not set
 ## below 1 makes ttweaks gpu crash
-## CONFIG_MALI_DEBUG_KERNEL_SYSFS is not set
+## # CONFIG_MALI_DEBUG_KERNEL_SYSFS is not set
 # CONFIG_EXYNOS_AFBC_DEBUG is not set
 # CONFIG_USB_DEBUG_DETAILED_LOG is not set
 # CONFIG_MMC_DW_DEBUG is not set
