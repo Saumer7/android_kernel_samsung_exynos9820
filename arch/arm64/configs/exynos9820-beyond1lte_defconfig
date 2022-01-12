@@ -6407,12 +6407,12 @@ CONFIG_FPSIMD_CORRUPTION_DETECT=y
 
 ## Disable CPU throttle except exynos_ocp
 ## disable 1950 limit of little cpu, seems disable LIT&MID cpu throttling
-# CONFIG_EXYNOS_THERMAL is not set
+## CONFIG_EXYNOS_THERMAL is not set
 ## above 1 related with below 2
-# CONFIG_EXYNOS_ACPM_THERMAL is not set
-# CONFIG_THERMAL_EMULATION is not set
+## CONFIG_EXYNOS_ACPM_THERMAL is not set
+## CONFIG_THERMAL_EMULATION is not set
 ## fix builderror with some thermal related things off
-# CONFIG_SEC_BOOTSTAT is not set
+## CONFIG_SEC_BOOTSTAT is not set
 
 
 
