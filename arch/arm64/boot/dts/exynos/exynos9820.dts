@@ -10416,8 +10416,7 @@
 				};
 
 				mid-alert0 {
-					temperature = <0x17318>;
-					temperature = <0x14c08>;
+					temperature = <0x17338>;
 					hysteresis = <0x1388>;
 					type = "active";
 					linux,phandle = <0x2db>;
@@ -10425,8 +10424,7 @@
 				};
 
 				mid-alert1 {
-					temperature = <0x186a0>;
-					temperature = <0x15f90>;
+					temperature = <0x186c0>;
 					hysteresis = <0x1388>;
 					type = "active";
 					linux,phandle = <0x2dc>;
@@ -10434,8 +10432,7 @@
 				};
 
 				mid-alert2 {
-					temperature = <0x19a28>;
-					temperature = <0x17318>;
+					temperature = <0x19a58>;
 					hysteresis = <0x1388>;
 					type = "active";
 					linux,phandle = <0x2dd>;
@@ -10443,8 +10440,8 @@
 				};
 
 				mid-alert3 {
-					temperature = <0x1adb0>;
-					temperature = <0x186a0>;
+					temperature = <0x1add0>;
+					hysteresis = <0x1388>;
 					type = "active";
 					linux,phandle = <0x2de>;
 					phandle = <0x2de>;
