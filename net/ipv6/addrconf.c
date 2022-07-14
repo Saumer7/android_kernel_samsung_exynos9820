@@ -2257,6 +2257,7 @@ static int ipv6_generate_eui64(u8 *eui, struct net_device *dev)
 	case ARPHRD_TUNNEL6:
 	case ARPHRD_IP6GRE:
 		return addrconf_ifid_ip6tnl(eui, dev);
+	case ARPHRD_RAWIP:
 	case ARPHRD_PPP: {
 		struct in6_addr lladdr;
 		if (ipv6_get_lladdr(dev, &lladdr, IFA_F_TENTATIVE))
@@ -3070,6 +3071,9 @@ static void sit_add_v4_addrs(struct inet6_dev *idev)
 	memcpy(&addr.s6_addr32[3], idev->dev->dev_addr, 4);
 
 	if (idev->dev->flags&IFF_POINTOPOINT) {
+		if (idev->cnf.addr_gen_mode == IN6_ADDR_GEN_MODE_NONE)
+			return;
+
 		addr.s6_addr32[0] = htonl(0xfe800000);
 		scope = IFA_LINK;
 		plen = 64;
@@ -3301,6 +3305,7 @@ static void addrconf_dev_config(struct net_device *dev)
 	    (dev->type != ARPHRD_IPGRE) &&
 	    (dev->type != ARPHRD_TUNNEL) &&
 	    (dev->type != ARPHRD_NONE) &&
+	    (dev->type != ARPHRD_RAWIP) &&
 	    (dev->type != ARPHRD_PPP)) {
 		/* Alas, we support only Ethernet autoconfiguration. */
 		idev = __in6_dev_get(dev);
@@ -4070,6 +4075,15 @@ static void addrconf_dad_work(struct work_struct *w)
 	}
 
 	ifp->dad_probes--;
+	if (!strcmp(ifp->idev->dev->name, "aware_data0")) {
+		pr_info("Reduce waing time from %lu to %lu (HZ=%lu) to send NS for quick transmission for %s\n",
+			NEIGH_VAR(ifp->idev->nd_parms, RETRANS_TIME),
+			NEIGH_VAR(ifp->idev->nd_parms, RETRANS_TIME)/10,
+			HZ,
+			ifp->idev->dev->name);
+		addrconf_mod_dad_work(ifp,
+					NEIGH_VAR(ifp->idev->nd_parms, RETRANS_TIME)/10);
+	} else
 	addrconf_mod_dad_work(ifp,
 			      NEIGH_VAR(ifp->idev->nd_parms, RETRANS_TIME));
 	spin_unlock(&ifp->lock);
