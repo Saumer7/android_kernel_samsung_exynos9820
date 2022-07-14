@@ -2,7 +2,12 @@ workflow added
 
 # CONFIG_EXYNOS_EHLD is not set to fix build error idk
 
-disable some cpu throttle
+NOT disable some cpu throttle
+seems perfo3 + enable cpu throttle
+need chk what I did, I dont remember..
+
+
+
 beyond1lte defconfig
 lib/debug-snapshot disable some throttle related things
 
