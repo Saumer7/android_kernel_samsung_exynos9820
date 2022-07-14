@@ -9887,7 +9887,7 @@
 			cal-id = <0xb040003>;
 			dm-type = <0x1>;
 			max-freq = <0x249f00>;
-			min-freq = <0x7bc78>;
+			min-freq = <0x5c0a8>;
 			pm_qos-min-class = <0x5>;
 			pm_qos-max-class = <0x6>;
 			#cooling-cells = <0x2>;
