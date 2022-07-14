@@ -13,7 +13,7 @@ jobs:
       uses: lemniskett/android-kernel-actions@master
       with:
         arch: arm64                                                     # Specify arch
-        compiler: clang/11/binutils                                     # Specify toolchain to use
+        compiler: clang/14/binutils                                     # Specify toolchain to use
         defconfig: exynos9820-beyond1lte_defconfig                      # Specify defconfig to use
         image: Image-dtb                                                # Specify final build file
     - name: Upload build artifact
