@@ -6793,7 +6793,8 @@ CONFIG_TRIM_UNUSED_KSYMS=y
 # CONFIG_SDP is not set
 # CONFIG_DLP is not set
 # CONFIG_DDAR is not set
-# CONFIG_MALI_KUTF is not set
+## deleted
+## # CONFIG_MALI_KUTF is not set
 # CONFIG_GATOR is not set
 # CONFIG_SLUB_DEBUG_ON is not set
 ## below 1 makes build error
@@ -6802,3 +6803,6 @@ CONFIG_TRIM_UNUSED_KSYMS=y
 # CONFIG_EXYRNG_FIPS_COMPLIANCE is not set
 # CONFIG_EXYRNG_FAIL_POLICY_RESET is not set
 # CONFIG_NODE_FOR_SELFTEST_FAIL is not set
+
+# CONFIG_NTFS_DEBUG is not set
+# CONFIG_MALI_EXYNOS_DEBUG is not set
