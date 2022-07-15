@@ -10,10 +10,10 @@ jobs:
     - name: "Checkout kernel source"                                    # Clone the kernel source.
       uses: actions/checkout@v2
     - name: "Android kernel build"                                      # Build kernel with lemniskett/android-kernel-actions.
-      uses: lemniskett/android-kernel-actions@master
+      uses: Saumer7/android-kernel-actions@master
       with:
         arch: arm64                                                     # Specify arch
-        compiler: clang/13/binutils                                     # Specify toolchain to use
+        compiler: straton-clang                                         # Specify toolchain to use
         defconfig: exynos9820-beyond1lte_defconfig                      # Specify defconfig to use
         image: Image-dtb                                                # Specify final build file
     - name: Upload build artifact
